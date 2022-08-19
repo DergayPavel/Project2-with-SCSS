@@ -1,0 +1,21 @@
+@mixin flex_between {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+@mixin flex_between_row {
+    @include flex_between;
+    flex-direction: row;
+}
+
+@mixin flex_between_column {
+    @include flex_between;
+    flex-direction: column;
+    
+}
+
+@mixin wh($width,$height) {
+    width: $width;
+    height: $height;
+}

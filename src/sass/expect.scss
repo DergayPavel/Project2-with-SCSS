@@ -1,0 +1,190 @@
+$var1: #000000;
+$var2: #ffffff;
+$var3: #745ac3;
+$var4: #6244bb;
+$var5: #4a2ca5;
+$var6: #CCCCCC;
+@import "mixins";
+.expect {
+	margin-top: 70px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__name {
+		font-size: 2rem;
+		line-height: 1.25;
+		font-weight: 600;
+		font-family: "Open Sans";
+		margin-bottom: 32px;
+        @media(max-width:768px){
+            font-size: 1.5rem;
+            line-height: 1.33;
+            max-width: 95%;
+            text-align: center;
+        }
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		width: 1135px;
+        @media(max-width:1180px){
+            width: 100%;
+        }
+        @media(max-width:768px){
+            width:100%;
+            align-items: center;
+        }
+		&_block1 {
+            @include wh(1135px,391px);
+			margin-bottom: 48px;
+            @include flex_between_row;
+            @media(max-width:1180px){
+                @include wh(100%,100%);
+                justify-content: space-around;
+            }
+            @media(max-width:768px){
+                @include wh(95%,auto);
+                flex-direction: column;
+                align-items: center;
+            }
+			&-right {
+                @include wh(547.5px,175px);	
+                @include flex_between_column;
+                @media(max-width:1180px){
+                    width: 48%;
+                }
+                @media(max-width:768px){
+                    @include wh(648px,auto);	
+                    max-width: 100%;
+                    @include flex_between_column;
+                }
+				&_name {
+					font-size: 1.5rem;
+					line-height: 2rem;
+					font-weight: 600;
+					color: $var1;
+					font-family: "Open Sans";
+                    @media(max-width:768px){
+                        font-size: 1.25rem;
+                        line-height: 1.7;
+                    }
+				}
+				&_text {
+					color: inherit;
+					font-size: 1rem;
+					font-family: "Open Sans";
+					line-height: 1.4;
+                    @media(max-width:768px){
+                        margin-bottom: 10px;
+                    }
+				}
+				&_btn {
+					width: 78.625px;
+					height: 24px;
+					font-family: "Open Sans";
+					color: $var2;
+					border-width: 2px;
+					border-style: solid;
+					border-color: $var3;
+					background-color: $var4;
+					border-radius: 4px;
+					padding-top: 0.75rem;
+					padding-right: 2.5rem;
+					padding-bottom: 0.75rem;
+					padding-left: 2.5rem;
+					&:hover {
+						background-color: $var5;
+					}
+				}
+			}
+			&-left_link {
+                @include wh(513.5px,46.4px);	
+                @include flex_between_row;
+				padding: 16px;
+				border: 0.0625rem solid $var6;
+				border-radius: 0.25rem;
+				align-items: center;
+                @media(max-width:1180px){
+                    @include wh(92%,100%);	
+                    margin-bottom: 10px;
+                }
+                @media(max-width:265px){
+                        max-width: 85%;
+                        height: auto;
+                    }
+				&:hover {
+					border: 3px solid $var4;
+                    
+				}
+			}
+		}
+		&_img1 {
+            @include wh(547.5px,351px);	
+            @media(max-width:1180px){
+                @include wh(48%,100%);	
+            }
+            @media(max-width:768px){
+                @include wh(558px,auto);	
+                max-width: 100%;
+                margin-bottom: 25px;
+            }
+		}
+		&_block2 {
+			width: 1135px;
+            @include flex_between_row;
+            @media(max-width:1180px){
+                width: 100%;
+                justify-content: space-around;
+            }
+            @media(max-width:768px){
+                margin-bottom: 20px;
+            }
+            @media(max-width:944px){
+                margin-bottom: 30px ;
+            }
+			&-left {
+				width: 547.500px;
+				height: 240.800px;
+                @include flex_between_column;
+                @media(max-width:1180px){
+                    @include wh(48%,240.8px);	
+                }
+                @media(max-width:768px){
+                    width: 750px;
+                    max-width: 90%;
+                }
+                @media(max-width:365px){
+                    height: auto;
+                }
+				&_name {
+					font-size: 1.5rem;
+					line-height: 2rem;
+					font-weight: 600;
+					color: $var1;
+					font-family: "Open Sans";
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&_img2 {
+            @include wh(547.5px,351.263px);	
+            @media(max-width:1180px){
+                @include wh(48%,100%);	
+            }
+            @media(max-width:768px){
+                display: none;
+            }
+		}
+	}
+}
+.link-name {
+	font-family: "Open Sans";
+	line-height: 1.5;
+	font-weight: 600;
+}
+.link-text {
+	font-family: "Open Sans";
+	font-weight: inherit;
+	line-height: 1.4;
+}

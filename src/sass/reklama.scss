@@ -1,0 +1,35 @@
+@import "mixins";
+.reklama {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 130px;
+	margin-bottom: 96px;
+    @media(max-width:944px){
+        display: none;
+    }
+	&__block {
+		width: 1136px;
+		height: 440px;
+		@include flex_between_column;
+		align-items: center;
+        @media(max-width:1180px){
+            width:100%;;
+        }
+		&_line {
+			width: 1136px;
+			@include flex_between_row;
+            @media(max-width:1180px){
+                width:100%;;
+            }
+		}
+	}
+	&__line {
+		border-radius: 4px;
+	}
+	&__stolb {
+		width: 728px;
+		height: 90px;
+	}
+}

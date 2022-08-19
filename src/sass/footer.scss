@@ -1,0 +1,131 @@
+$var1: #e6e6e6;
+$var2: #d4d4d0;
+$var3: #666666;
+$var4: #cccccc;
+$var5: #0033a0;
+$var6: #2172ba;
+@import "mixins";
+
+footer {
+	width: 100%;
+	background-color: $var1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 50px;
+}
+.footer__language {
+	padding: 24px 0 24px 0;
+	line-height: 16.8px;
+	font-size: 12px;
+	letter-spacing: 0;
+	font-family: "Open Sans";
+}
+.footer__info {
+	width: 1136px;
+	height: 75px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top: 1px solid $var2;
+	border-bottom: 1px solid $var2;
+	@include flex_between_row;
+    @media(max-width:1150px){
+        width: 92%;
+        height: 75px;
+    }
+    @media(max-width:944px){
+        height: auto;
+    }
+    @media(max-width:415px){
+        flex-direction: column;
+        height: 400px;
+    }
+	&_block {
+		width: 272px;
+		@include flex_between_column;
+        @media(max-width:415px){
+            border-bottom:1px solid gray ;
+            max-width: 100%;
+        }
+		&:first-child {
+			justify-content: space-evenly;
+		}
+		&-link {
+			line-height: 1.2;
+			color: $var3;
+			font-size: 16px;
+			font-family: "Open Sans";
+            @media(max-width:415px){
+                padding-bottom: 10px; 
+                max-width: 100%;
+            }
+		}
+	}
+}
+.footer__search {
+	margin-top: 20px;
+	font-size: 16px;
+	color: $var3;
+	font-weight: normal;
+	font-family: "Open Sans";
+	line-height: 1.4;
+}
+.footer__connected {
+	font-weight: normal;
+	color: $var3;
+	font-size: 16px;
+	font-family: "Open Sans";
+	line-height: 1.4;
+	padding-top: 40px;
+	margin-bottom: 14px;
+}
+
+.footer__img {
+	margin-right: 15px;
+}
+.footer__text {
+	@include flex_between_row;
+	margin-top: 30px;
+	width: 1100px;
+    @media(max-width:1150px){
+        width: 92%;
+    }
+    @media(max-width:944px){
+        flex-direction: column;
+        width: 95%;
+        text-align: center;
+        align-items: center;
+    }
+	&_par {
+		width: 90%;
+		font-size: 13px;
+		font-family: "Open Sans";
+		line-height: 1.4;
+	}
+}
+.footer__btn {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 0;
+	font-weight: 600;
+	padding: 12px;
+	border: 1px solid $var4;
+	border-radius: 4px;
+	color: $var5;
+	text-decoration: underline;
+	margin-top: 10px;
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-left: 2px;
+		border: solid $var6;
+		border-width: 0 2px 2px 0;
+		-webkit-transform: rotate(315deg);
+		transform: rotate(315deg);
+		width: 6px;
+		height: 6px;
+		margin-right: 5px;
+	}
+}

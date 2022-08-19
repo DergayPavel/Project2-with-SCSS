@@ -1,0 +1,156 @@
+.planning {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+.planning__name {
+  margin-bottom: 32px;
+  font-family: Open Sans;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  .planning__name {
+    font-size: 1.5rem;
+    line-height: 1.33;
+  }
+}
+
+.planning__info {
+  width: 1150px;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+}
+
+@media (max-width: 1180px) {
+  .planning__info {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .planning__info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.planning__info_block {
+  width: 360px;
+  height: 390px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-direction: column;
+  display: flex;
+}
+
+@media (max-width: 1180px) {
+  .planning__info_block {
+    width: 31%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .planning__info_block {
+    width: 92%;
+    margin-bottom: 20px;
+  }
+}
+
+.block-img {
+  width: 360px;
+  height: 203px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+@media (max-width: 1180px) {
+  .block-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-img {
+    height: auto;
+  }
+}
+
+.block-name {
+  width: 328px;
+  color: #000;
+  padding: 16px;
+  font-family: Open Sans;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+@media (max-width: 1180px) {
+  .block-name {
+    width: 90%;
+    height: max-content;
+    margin-bottom: auto;
+    padding-right: 0;
+  }
+}
+
+.block-text {
+  width: 328px;
+  color: inherit;
+  padding: 0 16px 16px;
+  font-family: Open Sans;
+  font-size: 1rem;
+}
+
+@media (max-width: 1180px) {
+  .block-text {
+    width: 90%;
+    height: 107px;
+    margin-top: auto;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-text {
+    width: 92%;
+    min-height: 30px;
+    height: auto;
+    max-height: auto;
+  }
+}
+
+.block-btn {
+  width: 52.28px;
+  color: #6244bb;
+  border: 2px solid #6244bb;
+  border-radius: 4px;
+  margin-left: 16px;
+  padding: 12px 40px;
+  font-family: Open Sans;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1180px) {
+  .block-btn {
+    margin-bottom: 15px;
+  }
+}
+
+.block-btn:hover {
+  color: #412d7b;
+  border: 2px solid #412d7b;
+}
+
+/*# sourceMappingURL=UNITED.271b467e.css.map */
