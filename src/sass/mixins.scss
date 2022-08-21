@@ -19,3 +19,10 @@
     width: $width;
     height: $height;
 }
+
+@mixin text-style($font, $color, $height, $size){
+    font-family: $font;
+	color: $color;
+	line-height: $height;
+	font-size: $size;
+}

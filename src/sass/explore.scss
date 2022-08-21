@@ -25,10 +25,7 @@ $var8: #2172ba;
             width: 100%;
         }
 		&-name {
-			font-size: 32px;
-			font-family: "Open Sans";
-			line-height: 2.5rem;
-			color: $var2;
+			@include text-style("Open Sans", $var2, 2.5rem, 32px);
 			text-align: center;
 			font-weight: 400;
 			margin-bottom: 8px;
@@ -37,12 +34,9 @@ $var8: #2172ba;
             }
 		}
 		&-text {
-			font-size: 20px;
-			line-height: 1.5rem;
+			@include text-style("Open Sans", $var2, 1.5rem, 20px);
 			text-align: center;
-			color: $var2;
 			font-weight: 400;
-			font-family: "Open Sans";
 			margin-bottom: 16px;
             @media(max-width:944px){
                 font-size: 16px;
@@ -50,15 +44,12 @@ $var8: #2172ba;
             }
 		}
 		&-warning {
-			@include wh(55px,1118px);	
-			font-size: 1rem;
+			@include wh(1118px,55px);	
+			@include text-style("Open Sans", $var2, 1.5rem, 1rem);
 			font-weight: 400;
-			color: $var2;
-			font-family: "Open Sans";
 			background-color: white;
 			border: 1px solid #ccc ;
 			border-left: 8px solid $var3;
-			line-height: 1.5;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -108,14 +99,11 @@ $var8: #2172ba;
 	}
 }
 .form-flyingfrom-text {
-	font-size: 16px;
+	@include text-style("Open Sans", $var2, 1.5, 16px);
 	font-weight: normal;
-	color: $var2;
 	margin-bottom: 0.25rem;
-	line-height: 1.5;
 	opacity: 1 ;
 	letter-spacing: 1px;
-	font-family: "Open Sans";
 }
 #inp__text_flyingfrom {
 	border: 1px solid $var4;
@@ -126,28 +114,20 @@ $var8: #2172ba;
 	background-color: $var1;
 }
 #select__roundtrip {
-	font-size: 1rem;
+	@include text-style("Open Sans", $var2, 1.5, 16px);
 	font-weight: 400;
-	line-height: 1.5;
-	font-family: inherit;
 	border: 1px solid gray;
 	border-radius: 4px;
 	outline: none;
-	color: $var2;
 	background-color: $var5;
-	font-size: 16px;
-	font-family: "Open Sans";
 	padding: 9px;
 }
 .form-dates {
-	font-size: 16px;
+	@include text-style("Open Sans", $var2, 1.5, 16px);
 	font-weight: normal;
-	color: $var2;
 	margin-bottom: 0.25rem;
-	line-height: 1.5;
 	opacity: 1 ;
 	letter-spacing: 1px;
-	font-family: "Open Sans";
 }
 #inp__date_flexible {
 	width: 190px;
@@ -159,25 +139,19 @@ $var8: #2172ba;
 	background-color: $var1;
 }
 .form-price {
-	font-size: 16px;
+	@include text-style("Open Sans", $var2,1.5, 16px);
 	font-weight: normal;
-	color: $var2;
 	margin-bottom: 0.25rem;
-	line-height: 1.5;
 	opacity: 1 ;
 	letter-spacing: 1px;
-	font-family: "Open Sans";
 }
 #inp__text_price {
+	@include text-style("Open Sans", $var2, 1, 16px);
 	width: 120px;
 	border: 1px solid $var4;
 	padding: 0 10px 0 20px;
 	border-radius: 5px;
-	font-size: 16px;
-	color: $var2;
 	letter-spacing: 0;
-	line-height: 1;
-	font-family: "Open Sans";
 	height: 40px;
 	font-weight: 400;
     @media (max-width:1180px){
@@ -210,10 +184,9 @@ $var8: #2172ba;
 	}
 }
 #inp__btn_refine {
-	width: 90px;
+	@include wh(90px, 16px);
 	margin-top: 40px;
 	padding: 0px;
-	height: 16px;
 	font-size: 14px;
 	font-weight: 600;
 	color: $var7;

@@ -22,16 +22,14 @@ footer {
 	font-family: "Open Sans";
 }
 .footer__info {
-	width: 1136px;
-	height: 75px;
+	@include wh(1136px, 75px);
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-top: 1px solid $var2;
 	border-bottom: 1px solid $var2;
 	@include flex_between_row;
     @media(max-width:1150px){
-        width: 92%;
-        height: 75px;
+		@include wh(92%, 75px);
     }
     @media(max-width:944px){
         height: auto;
@@ -51,10 +49,7 @@ footer {
 			justify-content: space-evenly;
 		}
 		&-link {
-			line-height: 1.2;
-			color: $var3;
-			font-size: 16px;
-			font-family: "Open Sans";
+			@include text-style("Open Sans", $var3, 1.2, 16px);
             @media(max-width:415px){
                 padding-bottom: 10px; 
                 max-width: 100%;
@@ -63,19 +58,13 @@ footer {
 	}
 }
 .footer__search {
+	@include text-style("Open Sans", $var3, 1.4, 16px);
 	margin-top: 20px;
-	font-size: 16px;
-	color: $var3;
 	font-weight: normal;
-	font-family: "Open Sans";
-	line-height: 1.4;
 }
 .footer__connected {
+	@include text-style("Open Sans", $var3, 1.4, 16px);
 	font-weight: normal;
-	color: $var3;
-	font-size: 16px;
-	font-family: "Open Sans";
-	line-height: 1.4;
 	padding-top: 40px;
 	margin-bottom: 14px;
 }

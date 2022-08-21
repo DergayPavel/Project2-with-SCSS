@@ -124,15 +124,15 @@
 @media (max-width: 768px) {
   .block-text {
     width: 92%;
-    min-height: 30px;
     height: auto;
+    min-height: 30px;
     max-height: auto;
   }
 }
 
 .block-btn {
-  width: 52.28px;
   color: #6244bb;
+  width: 52.28px;
   border: 2px solid #6244bb;
   border-radius: 4px;
   margin-left: 16px;

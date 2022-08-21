@@ -60,28 +60,21 @@ $var6: #CCCCCC;
                     @include flex_between_column;
                 }
 				&_name {
-					font-size: 1.5rem;
-					line-height: 2rem;
+                    @include text-style("Open Sans", $var1, 2rem, 1.5rem);
 					font-weight: 600;
-					color: $var1;
-					font-family: "Open Sans";
                     @media(max-width:768px){
                         font-size: 1.25rem;
                         line-height: 1.7;
                     }
 				}
 				&_text {
-					color: inherit;
-					font-size: 1rem;
-					font-family: "Open Sans";
-					line-height: 1.4;
+                    @include text-style("Open Sans", inherit, 1.4, 1rem);
                     @media(max-width:768px){
                         margin-bottom: 10px;
                     }
 				}
 				&_btn {
-					width: 78.625px;
-					height: 24px;
+                    @include wh(78.625px,24px);
 					font-family: "Open Sans";
 					color: $var2;
 					border-width: 2px;
@@ -144,8 +137,7 @@ $var6: #CCCCCC;
                 margin-bottom: 30px ;
             }
 			&-left {
-				width: 547.500px;
-				height: 240.800px;
+                @include wh(547.500px, 240.800px);
                 @include flex_between_column;
                 @media(max-width:1180px){
                     @include wh(48%,240.8px);	
@@ -158,11 +150,7 @@ $var6: #CCCCCC;
                     height: auto;
                 }
 				&_name {
-					font-size: 1.5rem;
-					line-height: 2rem;
-					font-weight: 600;
-					color: $var1;
-					font-family: "Open Sans";
+                    @include text-style("Open Sans", $var1, 2rem, 1.5rem);
 					margin-bottom: 15px;
 				}
 			}

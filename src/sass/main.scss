@@ -14,16 +14,13 @@ body{
 
 .right__main-menu {
 	@include wh(16px,78px);	
-	line-height: normal;
+	@include text-style("Open Sans", $var8, normal, 12px);
 	vertical-align: baseline;
 	background: rgb(0, 96, 128);
 	padding: 10px;
-	font-size: 12px;
 	writing-mode: vertical-rl;
 	transform: rotateZ(180deg);
 	letter-spacing: 0;
-	font-family: "Open Sans";
-	color: white;
 	position: fixed;
 	right: 0%;
 	top: 43%;
@@ -78,11 +75,9 @@ body{
 		@include wh(1136px,96px);	
 		@include flex_between_row;
 		align-items: center;
-
         @media (max-width:1184px){
             width: 100%;
         }
-
         @media(max-width:944px){
             height: 60px;
         }
@@ -95,7 +90,6 @@ body{
 				@include wh(208px,50px);	
             }
         }
-		
 		&_right {
 			@include wh(650px,70px);	
 			@include flex_between_column;
@@ -129,10 +123,7 @@ body{
             }
 			
 			&-option{
-				font-family: "Open Sans";
-				color: white;
-				line-height: 16.8px;
-				font-size: 12px;
+				@include text-style("Open Sans", $var8, 16.8px, 12px);
 				align-content: center;
 				display: flex;
                 @media(max-width:720px){
@@ -160,10 +151,7 @@ body{
                     display: none;
                 }
 				&-link{
-					font-size: 14px;
-					color: white;
-					font-family: "Open Sans";
-					line-height: 1.4;
+					@include text-style("Open Sans", $var8, 1.4, 14px);
 					letter-spacing: 1px;
 					font-weight: bold;
                 }
@@ -211,7 +199,7 @@ body{
                     flex-direction: column;
                 }
 				&-name {
-					@include wh(141px,45px);	
+					@include wh(141px,45px);
 					font-size: 16px;
 					font-weight: normal;
 					font-family: "Open Sans";
@@ -442,12 +430,9 @@ body{
     }
 	&__first {
 		@include flex_between_row;
-		font-size: 14px;
-		font-family: "Open Sans";
+		@include text-style("Open Sans", $var4, 1, 14px);
 		font-weight: normal;
 		letter-spacing: normal;
-		color: $var4;
-		line-height: 1;
 		text-align: center;
 		height: 20px;
 		align-items: center;
@@ -481,10 +466,7 @@ body{
 	&_name {
 		letter-spacing: 1px;
 		font-weight: 600;
-		font-family: "Open Sans";
-		color: $var5;
-		font-size: 12px;
-		line-height: 1;
+		@include text-style("Open Sans", $var5, 1, 12px);
 		@include flex_between_row;
         @media(max-width:1124px){
             width: 399px;
@@ -506,11 +488,8 @@ body{
 			height: 72px;
 			@include flex_between_column;
 			&-link {
-				color: $var3;
-				font-size: 14px;
-				font-family: "Open Sans";
+				@include text-style("Open Sans", $var3, 1.15, 14px);
 				letter-spacing: 0;
-				line-height: 1.15;
 				&::after {
 					content: '';
 					display: inline-block;
@@ -525,11 +504,8 @@ body{
 			}
 			
 			&-text1 {
-				color: $var5;
-				font-size: 12px;
-				font-family: "Open Sans";
+				@include text-style("Open Sans", $var5, 1.4, 12px);
 				letter-spacing: 0;
-				line-height: 1.4;
 				margin-top: -20px;
                 @media(max-width:1124px){
                     margin-top:0;
@@ -537,11 +513,8 @@ body{
             }
 			
 			&-text2 {
-				color: $var5;
-				font-size: 12px;
-				font-family: "Open Sans";
+				@include text-style("Open Sans", $var5, 1.4, 12px);
 				letter-spacing: 0;
-				line-height: 1.4;
                 @media(max-width:1124px){
                     margin-top:10px;
                 }
@@ -655,15 +628,12 @@ body{
 }
 
 .files__name {
+	@include text-style("Open Sans", $var8, 1, 12px);
 	width: 270px;
 	margin-top: 15px;
 	margin-left: 10px;
 	font-weight: bold;
-	font-size: 12px;
-	line-height: 1;
 	letter-spacing: 1px;
-	color: white;
-	font-family: "Open Sans";
     @media(max-width:720px){
         width: 95%;
     }
@@ -682,14 +652,11 @@ body{
 }
 
 .files__learn {
+	@include text-style("Open Sans", $var8, 1.15, 14px);
 	width: 270px;
 	margin-left: 10px;
 	margin-top: 10px;
-	font-size: 14px;
-	line-height: 1.15;
 	letter-spacing: 0px;
-	color: white;
-	font-family: "Open Sans";
     @media(max-width:720px){
         width: 95%;
     }
@@ -719,20 +686,16 @@ body{
 
 .header__line {
 	display: none;
-	@include wh(15px,2px);
-	height: 15px;
-	width: 2px;
+	@include wh(2px,15px);
 	background-color: $var2;
 	margin-left: 5px;
     @media (max-width:1184px){
         display: flex;
     }
     @media(max-width:944px){
-        display: flex;
     }
     @media(max-width:720px){
-        display: flex;
-		@include wh(30px,2px);
+		@include wh(2px,30px);
         background-color: #666;
         margin-left: 5px;
         margin-right: 5px;
@@ -788,19 +751,19 @@ body{
 
 .fa-bell {
     @media(max-width:720px){
-        color: white;
+        color: $var8;
     }
 }
 
 .fa-user { 
     @media(max-width:720px){
-        color: white;
+        color: $var8;
     }
 }
 
 .fa-cart-shopping {
     @media(max-width:720px){
-        color: white;
+        color: $var8;
     }
 }
 

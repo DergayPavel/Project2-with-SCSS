@@ -10,8 +10,7 @@
         display: none;
     }
 	&__block {
-		width: 1136px;
-		height: 440px;
+		@include wh( 1136px, 440px);
 		@include flex_between_column;
 		align-items: center;
         @media(max-width:1180px){
@@ -29,7 +28,6 @@
 		border-radius: 4px;
 	}
 	&__stolb {
-		width: 728px;
-		height: 90px;
+		@include wh (728px, 90px);
 	}
 }

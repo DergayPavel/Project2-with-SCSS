@@ -42,8 +42,8 @@
 }
 
 .explore__block-text {
-  text-align: center;
   color: #000;
+  text-align: center;
   margin-bottom: 16px;
   font-family: Open Sans;
   font-size: 20px;
@@ -59,8 +59,8 @@
 }
 
 .explore__block-warning {
-  width: 55px;
-  height: 1118px;
+  width: 1118px;
+  height: 55px;
   color: #000;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -72,7 +72,7 @@
   font-family: Open Sans;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.5rem;
   display: flex;
 }
 
@@ -203,8 +203,8 @@
 }
 
 #inp__text_price {
-  width: 120px;
   color: #000;
+  width: 120px;
   letter-spacing: 0;
   height: 40px;
   border: 1px solid #666;

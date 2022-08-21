@@ -6,10 +6,10 @@ body {
 .right__main-menu {
   width: 16px;
   height: 78px;
+  color: #fff;
   vertical-align: baseline;
   writing-mode: vertical-rl;
   letter-spacing: 0;
-  color: #fff;
   box-shadow: none;
   background: #006080;
   padding: 10px;
@@ -601,8 +601,8 @@ body {
 }
 
 .form__first {
-  letter-spacing: normal;
   color: #333;
+  letter-spacing: normal;
   text-align: center;
   height: 20px;
   flex-direction: row;
@@ -875,9 +875,9 @@ body {
 }
 
 .files__name {
+  color: #fff;
   width: 270px;
   letter-spacing: 1px;
-  color: #fff;
   margin-top: 15px;
   margin-left: 10px;
   font-family: Open Sans;
@@ -908,9 +908,9 @@ body {
 }
 
 .files__learn {
+  color: #fff;
   width: 270px;
   letter-spacing: 0;
-  color: #fff;
   margin-top: 10px;
   margin-left: 10px;
   font-family: Open Sans;
@@ -953,10 +953,8 @@ body {
 }
 
 .header__line {
-  width: 15px;
-  height: 2px;
-  height: 15px;
   width: 2px;
+  height: 15px;
   background-color: #666;
   margin-left: 5px;
   display: none;
@@ -968,20 +966,13 @@ body {
   }
 }
 
-@media (max-width: 944px) {
-  .header__line {
-    display: flex;
-  }
-}
-
 @media (max-width: 720px) {
   .header__line {
-    width: 30px;
-    height: 2px;
+    width: 2px;
+    height: 30px;
     background-color: #666;
     margin-left: 5px;
     margin-right: 5px;
-    display: flex;
   }
 }
 

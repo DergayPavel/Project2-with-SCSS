@@ -2,6 +2,7 @@ $var1: #cccccc;
 $var2: #000000;
 $var3: #6244bb;
 $var4: #412d7b;
+@import "mixins";
 
 .planning {
 	width: 100%;
@@ -26,24 +27,21 @@ $var4: #412d7b;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-        @media(max-width:1180px){    
-            width: 100%;
-            height:auto;
+        @media(max-width:1180px){  
+			@include wh(100%, auto);
         }
         @media(max-width:768px){
             flex-direction: column;
             align-items: center;
         }
 		&_block {
-			width: 360px;
-			height: 390px;
+			@include wh(360px, 390px);
 			display: flex;
 			flex-direction: column;
 			border: 1px solid $var1;
 			border-radius: 4px;
-            @media(max-width:1180px){    
-                width: 31%;
-                height:auto;
+            @media(max-width:1180px){ 
+				@include wh(31%, auto);   
             }
             @media(max-width:768px){    
                 width: 92%;
@@ -53,13 +51,11 @@ $var4: #412d7b;
 	}
 }
 .block-img {
-	width: 360px;
-	height: 203px;
+	@include wh(360px, 203px);
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
     @media(max-width:1180px){    
-        width: 100%;
-        height:100%;
+		@include wh(100%, 100%);
     }
     @media(max-width:768px){
         height: auto;
@@ -69,11 +65,8 @@ $var4: #412d7b;
 .block-name {
 	width: 328px;
 	padding: 16px 16px 16px 16px;
-	font-family: "Open Sans";
-	line-height: 2rem;
+	@include text-style("Open Sans",$var2, 2rem,1.5rem);
 	font-weight: 600;
-	color: $var2;
-	font-size: 1.5rem;
     @media(max-width:1180px){    
         width: 90%;
         height: max-content;
@@ -88,24 +81,19 @@ $var4: #412d7b;
 	color: inherit;
 	font-family: "Open Sans";
     @media(max-width:1180px){    
-        width: 90%;
+		@include wh(90%,107px);
         padding-right: 0;
-        height: 107px;
         margin-top: auto;
     }
     @media(max-width:768px){    
-        width: 92%;
+		@include wh(92%,auto);
         min-height: 30px;
-        height: auto;
         max-height: auto;
     }
 }
 .block-btn {
+	@include text-style("Open Sans",$var3, 1.5, 1rem);
 	width: 52.28px;
-	color: $var3;
-	font-family: "Open Sans";
-	font-size: 1rem;
-	line-height: 1.5;
 	padding: 12px 40px 12px 40px;
 	border: 2px solid $var3 ;
 	border-radius: 4px;
